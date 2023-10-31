@@ -1,13 +1,13 @@
 import { MiddlewareConsumer, Module, RequestMethod } from '@nestjs/common';
-import { UserSettingService } from './user-setting.service';
+import { PengaturanAplikasi } from './pengaturan-aplikasi.service';
 
 @Module({
-  providers: [UserSettingService]
+  providers: [PengaturanAplikasi]
 })
-export class UserSettingModule {
+export class PengaturanAplikasiModule {
   configure(consumer: MiddlewareConsumer) {
     consumer
-      .apply(UserSettingService)
+      .apply(PengaturanAplikasi)
       .forRoutes(
         { path: 'api/v1/UserSetting*', method: RequestMethod.ALL },
         { path: 'api/v1/UserRoleSetting*', method: RequestMethod.ALL },
