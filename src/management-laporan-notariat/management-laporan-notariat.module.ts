@@ -10,6 +10,7 @@ export class ManagementLaporanNotariatModule {
       .apply(ManagementLaporanNotariatService)
       .forRoutes(
         { path: 'api/v1/LaporanNotariat*', method: RequestMethod.ALL },
+        { path: 'api/v1/DaftarLaporanNotariatMPD*', method: RequestMethod.ALL },
       )
   }
 }
