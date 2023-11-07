@@ -9,11 +9,7 @@ export class PengaturanAplikasiModule {
     consumer
       .apply(PengaturanAplikasiService)
       .forRoutes(
-        { path: 'api/v1/UserSetting*', method: RequestMethod.ALL },
-        { path: 'api/v1/UserRoleSetting*', method: RequestMethod.ALL },
-        { path: 'api/v1/MasterJenisAkta*', method: RequestMethod.ALL },
-        { path: 'api/v1/MasterJenisBisnisPengusaha*', method: RequestMethod.ALL },
-        { path: 'api/v1/MasterProfilJasaPengusaha*', method: RequestMethod.ALL },
+        { path: 'api/pengaturan-aplikasi*', method: RequestMethod.ALL },
       )
   }
 }
