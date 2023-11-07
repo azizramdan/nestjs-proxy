@@ -6,6 +6,9 @@ export class PengaturanAplikasiService {
     private readonly proxy = createProxyMiddleware({
         target: process.env.PENGATURAN_APLIKASI_HOST,
         changeOrigin: true,
+        pathRewrite: {
+            '^/gateway/api': '/api',
+        }
     });
 
     use(req, res, next) {

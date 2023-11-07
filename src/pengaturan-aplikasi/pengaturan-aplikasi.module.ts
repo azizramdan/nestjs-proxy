@@ -9,7 +9,7 @@ export class PengaturanAplikasiModule {
     consumer
       .apply(PengaturanAplikasiService)
       .forRoutes(
-        { path: 'api/pengaturan-aplikasi*', method: RequestMethod.ALL },
+        { path: 'gateway/api/Pengaturan*', method: RequestMethod.ALL },
       )
   }
 }

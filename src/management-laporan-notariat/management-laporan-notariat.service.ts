@@ -6,6 +6,9 @@ export class ManagementLaporanNotariatService {
     private readonly proxy = createProxyMiddleware({
         target: process.env.MANAGEMENT_LAPORAN_NOTARIAT_HOST,
         changeOrigin: true,
+        pathRewrite: {
+            '^/gateway/api': '/api',
+        }
     });
 
     use(req, res, next) {

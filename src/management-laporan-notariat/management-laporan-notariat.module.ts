@@ -9,7 +9,7 @@ export class ManagementLaporanNotariatModule {
     consumer
       .apply(ManagementLaporanNotariatService)
       .forRoutes(
-        { path: 'api/management-laporan-notariat*', method: RequestMethod.ALL },
+        { path: 'gateway/api/LaporanNotariat*', method: RequestMethod.ALL },
       )
   }
 }
