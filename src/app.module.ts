@@ -15,14 +15,12 @@ export class AppModule {
   configure(consumer: MiddlewareConsumer) {
     consumer
       .apply(PengaturanAplikasiMiddleware)
-      .forRoutes('gateway/api/Pengaturan*')
+      .forRoutes('gateway/api/Pengaturan*');
 
     consumer
       .apply(ManagementLaporanNotariatMiddleware)
-      .forRoutes('gateway/api/LaporanNotariat*')
+      .forRoutes('gateway/api/LaporanNotariat*');
 
-    consumer
-      .apply(DataNotarisMiddleware)
-      .forRoutes('gateway/api/DataNotaris*')
+    consumer.apply(DataNotarisMiddleware).forRoutes('gateway/api/DataNotaris*');
   }
 }
